@@ -3,6 +3,8 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+export EDITOR='emacsclient'
+
 export DOTFILES_ROOT=$(cat ${HOME}/.dotfiles_root)
 
 . ${DOTFILES_ROOT}/lib/os.sh
@@ -31,3 +33,5 @@ alias -g H='| head'
 alias -g T='| tail'
 alias -g X='| xargs'
 alias -g XG='| xargs grep'
+
+alias e='emacsclient'
