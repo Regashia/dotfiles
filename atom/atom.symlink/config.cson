@@ -1,0 +1,37 @@
+"*":
+  core:
+    packagesWithKeymapsDisabled: [
+      "emacs-plus"
+    ]
+    themes: [
+      "one-dark-ui"
+      "atom-dark-syntax"
+    ]
+  "disable-keybindings":
+    allCommunityPackages: true
+    bundledPackages: [
+      "go-to-line"
+      "bracket-matcher"
+    ]
+    exceptCommunityPackages: [
+      "emacs-plus"
+      "platformio-ide-terminal"
+    ]
+    prefixKeys: [
+      "ctrl-k"
+    ]
+  "exception-reporting":
+    userId: "a8b8c9c8-d7ed-4ae1-a3f6-d6cc193f088d"
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        blue: "#5267fe"
+      zBright:
+        brightBlue: "#6d85ff"
+    style:
+      theme: "one-dark"
+    toggles:
+      autoClose: true
+      cursorBlink: false
+  welcome:
+    showOnStartup: false
