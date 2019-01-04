@@ -1,5 +1,5 @@
 export TERM=xterm-256color
-export EDITOR='emacsclient'
+export EDITOR='emacsclient -nw'
 
 export DOTFILES_ROOT=$(cat ${HOME}/.dotfiles_root)
 
@@ -52,12 +52,15 @@ alias a='atom'
 function estart() {
   if ! emacsclient -e 0 > /dev/null 2>&1; then
     cd > /dev/null 2>&1
-    emacs&
+    emacs --daemon
     cd - > /dev/null 2>&1
   fi
 }
 
-alias e='emacsclient --no-wait'
+alias e='emacsclient -nw'
+alias ekill="emacsclient -e '(kill-emacs)'"
+alias erestart="emacsclient -e '(kill-emacs)' && estart"
+
 alias v='nvim'
 
 function macvim() {
